@@ -1,1 +1,0 @@
-# veraapritasarie.github.io
