@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5 Teman</title>
+</head>
+<body>
+	<center>
+		<h1>5 Teman</h1>
+	</center>
+	<hr>
+	<style>
+		
+  body {
+    font-family: "Arial";
+    font-size: 20px;
+    background-color: rgb(27, 38, 49);
+  }
+
+  tr {
+    background: rgba(85, 86, 47, 0.75);
+    padding: 2px solid;
+    text-align: center;
+
+  }
+  td {
+    background: rgba(85, 86, 47, 0.5);
+    cursor: pointer;
+    transition: .3s;
+    padding: 2px solid;
+    text-align: center;
+  }
+  td:hover {
+    background: yellow;
+  }
+  .speed {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+
+  }
+  .extreme:hover, .extreme:focus {
+  color: #fff;
+  outline: 0;
+}
+.kerang {
+  border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  transition: all 150ms ease-in-out;
+}
+.kerang:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+</style>
+<table class="cover">
+	<tbody>
+		<tr>
+			<th>No</th>
+			<th>Nama</th>
+			<th>Alamat</th>
+			<th>Aksi</th>
+		</tr>
+		<tr id="bagian_1">
+			<td>1</td>
+			<td class="nama">Anni Lestari</td>
+			<td class="alamat">Cirebon</td>
+			<td class="hapus" id="hapus_1">Hapus</td>
+		</tr>
+		<tr id="bagian_2">
+			<td>1</td>
+			<td class="nama">Dr Cahya Musliha Pab</td>
+			<td class="alamat">Cirebon</td>
+			<td class="hapus" id="hapus_2">Hapus</td>
+		</tr>
+		<tr id="bagian_3">
+			<td>1</td>
+			<td class="nama">May She Diva Puspita</td>
+			<td class="alamat">Cirebon</td>
+			<td class="hapus" id="hapus_3">Hapus</td>
+		</tr>
+		<tr id="bagian_4">
+			<td>1</td>
+			<td class="nama">Rezky Catur Bunga Naya</td>
+			<td class="alamat">Cirebon</td>
+			<td class="hapus" id="hapus_4">Hapus</td>
+		</tr>
+		<tr id="bagian_5">
+			<td>1</td>
+			<td class="nama">Suci Fidianti</td>
+			<td class="alamat">Cirebon</td>
+			<td class="hapus" id="hapus_5">Hapus</td>
+	</tbody>
+</table>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>	
+  $(document).ready(function(){
+     // alert(0)
+    $('.tas').click(function(){
+      // alert(1)
+      let isi = $(this).text();
+      // alert(isi);
+      let isi2 = prompt('Apakah anda ingin mengubahnya?:',isi);
+      if(!isi2) return;
+      // alert(isi2);
+
+      $(this).text(isi2);
+    })
+
+    $('.alamat').click(function(){
+     // alert(1)
+     let isi = $(this).text();
+     // alert(isi);
+     let isi2 = prompt('Apakah anda ingin mengubahnya?:',isi);
+     if(!isi2) return;
+     // alert(isi2);
+
+     $(this).text(isi2);
+    })
+
+
+    $('.hapus').click(function(){
+      // alert(1)
+     let betul = confirm('Anda yakin ingin menghapusnya?');
+     if(!betul) return;
+
+     let id = $(this).prop('id');
+     // alert(id);
+
+
+     let rid = id.split('__');
+     let baris_ke = rid[1];
+
+     // alert(baris_ke);
+
+     $('#bagan__'+baris_ke).slideUp()
+
+
+
+     // alert('Anda yakin')
+
+
+    })
+
+  })
+	</script>
+  </body>
+</html>
