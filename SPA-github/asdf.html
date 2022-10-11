@@ -1,0 +1,98 @@
+
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fortofolio</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <center>
+        <h1>Portofolio</h1>
+        <h4 id="tahoma">Vera Apritasarie</h4>
+    </center>
+</header>
+<div id="menu">
+    <div id="topmenu">
+        <ul>
+            <li>
+                <a href="#home" class="aktif">HOME</a>
+            </li>
+            <li>
+                <a href="#Profile" class>PROFILE</a>
+            </li>
+            <li>
+                <a href="#tugas" class>Portofolio</a>
+            </li>
+        </ul>
+    </div>
+    <div id="inifile" style>
+        <div id="filefile">
+            <div class="bagian_1" id="home" style>
+                <center>
+                    <img src="foto.jpg" id="fotosaya">
+                    <h3> Hallo! Selamat Datang di</h3>
+                    <h1 id="nama">Portofolio</h1>
+                </center>
+            </div>
+            <div class="bagian_2" id="Profile" style="display: none;">
+                <center>
+                   <h2 class="garisbawah">Data Diri</h2>
+                   <img src="vera.png" id="veravera">
+                   <p>
+                   "Nama Saya Vera Apritasarie, biasa dipanggil vera. saya merupakan mahasiswi dari STMIK IKMI Cirebon angkatan 2021, saya mengambil Program Studi Sistem Informasi dengan NIM 43210041."
+               </p>
+            </ul>
+        </center>
+    </div>
+    <div class="bagian_3" id="tugas" style="display: block;">
+            <h2 class="top">PEMROGRAMAN</h2>
+            <ul id="buatlist">
+                <li>
+                    <a href="https://veravina123.github.io/veraapritasarie.github.io/Responsive-CSS/index.html">1. Responsive-CSS HTML</a>
+                </li>
+                <li>
+                    <a href="https://veravina123.github.io/veraapritasarie.github.io/p04/kopsurat.html">2. Kop Surat</a>
+                </li>
+                <li>
+                    <a href="https://veravina123.github.io/veraapritasarie.github.io/p05%20Jquery%20Delete/jquery-fadeout-delete.html">3. Jquery Fadeout When Delete</a>
+                </li>
+                <li>
+                    <a href="https://veravina123.github.io/veraapritasarie.github.io/p05%20jquery%20sliding/p05-jquery-sliding.html">4. jquery sliding</a>
+                </li>
+                <li>
+                    <a href="https://veravina123.github.io/veraapritasarie.github.io/p06%20SPA%20MENU/p06-spa-menu.html">4. SPA MENU</a>
+                </li>
+            </center>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+        $(document).ready(function(){
+         var currentSection=0;
+        $('#inifile').hide();
+        $('ul li a').click(function(){
+            $('ul li a').removeClass('aktif');
+            $(this).addClass('aktif');
+
+            var href = $(this).attr('href');
+            $('#filefile>div').hide();
+
+            $(href).show();
+
+            if(currentSection == 0){
+            $('#inifile').slideToggle();
+            currentSection = href;
+            }else if(currentSection == href){
+            $('#inifile').slideToggle();
+            currentSection = 0;
+            }else{
+            currentSection = href;
+            }
+            return false;
+        });
+     });
+   </script>
+ </body>
+</html>

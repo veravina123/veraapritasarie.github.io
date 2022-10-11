@@ -1,0 +1,75 @@
+body{
+	background-color: #D2691E;
+	}
+
+header{
+	color: black;
+}
+@font-face{
+	font-family: 'tahoma';
+	src: url('Shorelines Script Bold.otf');
+}
+#namatahoma{font-family: tahoma;}
+
+#menu{
+	width: 100%;
+	height: 55px;
+	margin: 5px auto;
+	}
+
+#topmenu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #FF7F50;
+	}
+
+#topmenu li{
+	float: left;
+	}
+
+#topmenu li a{
+	padding: 14px 16px;
+	display: block;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	}
+
+#topmenu .aktif:hover{
+	box-shadow: 1px 1px 4px black;
+	background-color: #FFBE00;
+	transform: scale(1.1);
+	}
+
+#fotosaya{width: 15%;}
+
+#veravera{
+	width: 15%;
+}
+
+#buatfile{padding: 50px;}
+
+.bagian_1{
+	color: black;
+	font-size: 20px;
+}
+
+#nama:hover{
+	transform: scale(1.1);
+	color: #DEB887;
+}
+
+#buatlist{list-style: none;}
+
+#buatlist li a{
+	list-style: none;
+	text-decoration: none;
+	color: black;
+}
+
+#project a:hover{
+	background-color: #FFEBCD;
+	letter-spacing: 2px;
+}
